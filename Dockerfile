@@ -15,7 +15,7 @@ ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 # Install sdk elements
-RUN echo y | android update sdk --all --no-ui --filter "platform-tools,tools,build-tools,android-24,android-23,extra-android-m2repository,extra-google-google_play_services,extra-google-m2repository"
+RUN echo y | android update sdk --all --no-ui --filter "platform-tools,build-tools,android-24,android-23,extra-android-m2repository,extra-google-google_play_services,extra-google-m2repository"
 
 RUN which adb
 RUN which android
