@@ -26,3 +26,7 @@ RUN apt-get clean
 # GO to workspace
 RUN mkdir -p /opt/workspace
 WORKDIR /opt/workspace
+
+RUN git clone https://github.com/william0wang/initapp.git
+RUN cd initapp && chmod 755 gradlew && ./gradlew
+RUN rm -rf initapp
