@@ -28,5 +28,6 @@ RUN mkdir -p /opt/workspace
 WORKDIR /opt/workspace
 
 RUN git clone https://github.com/william0wang/initapp.git
-RUN cd initapp && chmod 755 gradlew && ./gradlew assembleRelease
+RUN chmod 755 initapp/gradlew
+RUN cd initapp && ./gradlew assembleRelease
 RUN rm -rf initapp
