@@ -7,7 +7,7 @@ RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y --force
 
 # Install Android SDK
 RUN mkdir -p /opt/android-sdk-linux
-RUN cd /opt/android-sdk-linux && axel --output=android-sdk.zip https://dl.google.com/android/repository/tools_r25.1.7-linux.zip && unzip android-sdk.zip && rm -f android-sdk.zip
+RUN cd /opt/android-sdk-linux && axel --output=android-sdk.zip https://dl.google.com/android/repository/tools_r25.2.2-linux.zip && unzip android-sdk.zip && rm -f android-sdk.zip
 RUN chown -R root.root /opt/android-sdk-linux
 
 # Setup environment
