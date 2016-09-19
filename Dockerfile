@@ -31,3 +31,5 @@ RUN git clone https://github.com/william0wang/initapp.git
 RUN chmod 755 initapp/gradlew
 RUN cd initapp && ./gradlew assembleRelease
 RUN rm -rf initapp
+
+RUN echo y | android update sdk --all --no-ui --filter "build-tools-24.0.3"
