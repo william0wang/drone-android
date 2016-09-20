@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  drone:
+    restart: always
+    build: .
+    volumes:
+      - ./data/android-sdk-linux:/data/android-sdk-linux
+      - ./data/workspace:/data/workspace
