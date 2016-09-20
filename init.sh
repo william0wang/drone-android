@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ver_file=/data/last_build
+ver_file=/data/workspace/last_build
 
 var=`cat $ver_file`
 
