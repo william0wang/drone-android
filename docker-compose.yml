@@ -3,7 +3,7 @@ version: '2'
 services:
   drone:
     restart: always
-    build: .
+    image: wan0eve/drone-android:latest
     volumes:
       - ./data/android-sdk-linux:/data/android-sdk-linux
       - ./data/workspace:/data/workspace
