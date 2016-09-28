@@ -7,7 +7,7 @@ RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y --force
 apt-get clean
 
 # Install Android SDK
-RUN mkdir -p /data/android-sdk-linux
+# RUN mkdir -p /data/android-sdk-linux
 # RUN cd /data/android-sdk-linux && axel --output=android-sdk.zip https://dl.google.com/android/repository/tools_r25.2.2-linux.zip && \
 # unzip android-sdk.zip && rm -f android-sdk.zip
 # RUN chown -R root.root /data/android-sdk-linux
@@ -24,7 +24,7 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 # RUN which android
 
 # GO to workspace
-RUN mkdir -p /data/workspace
+# RUN mkdir -p /data/workspace
 WORKDIR /data/workspace
 
 RUN mkdir -p /opt
