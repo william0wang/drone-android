@@ -5,5 +5,5 @@ services:
     restart: always
     image: wan0eve/drone-android:latest
     volumes:
-      - ./data/android-sdk-linux:/data/android-sdk-linux
-      - ./data/workspace:/data/workspace
+      - /data/drone/android-sdk-linux:/data/android-sdk-linux
+      - /data/drone/workspace:/data/workspace
