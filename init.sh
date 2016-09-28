@@ -29,3 +29,15 @@ if [ $var -lt 1 ]; then
     echo 1 >$ver_file
 
 fi
+
+if [ $var -lt 2 ]; then
+
+    cd /data/android-sdk-linux
+    mkdir licenses
+    cd licenses
+    echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "android-sdk-license"
+    echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "android-sdk-preview-license"
+
+    echo 2 >$ver_file
+
+fi
