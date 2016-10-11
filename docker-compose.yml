@@ -2,8 +2,8 @@ version: '2'
 
 services:
   drone:
-    restart: always
     image: wan0eve/drone-android:latest
     volumes:
       - /data/docker/drone/data/android-sdk-linux:/data/android-sdk-linux
       - /data/docker/drone/data/workspace:/data/workspace
+      - /data/docker/drone/data/gradle:/root/.gradle
