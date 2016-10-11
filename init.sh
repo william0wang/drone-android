@@ -41,3 +41,11 @@ if [ $var -lt 2 ]; then
     echo 2 >$ver_file
 
 fi
+
+if [ $var -lt 3 ]; then
+
+    echo y | android update sdk --all --no-ui --filter "build-tools-24.0.3"
+
+    echo 3 >$ver_file
+
+fi
