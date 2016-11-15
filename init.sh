@@ -49,3 +49,11 @@ if [ $var -lt 3 ]; then
     echo 3 >$ver_file
 
 fi
+
+if [ $var -lt 4 ]; then
+
+    echo y | android update sdk --all --no-ui --filter "platform-tools-25,build-tools-25,android-25,extra-android-m2repository"
+
+    echo 4 >$ver_file
+
+fi
