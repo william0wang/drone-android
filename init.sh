@@ -57,3 +57,11 @@ if [ $var -lt 4 ]; then
     echo 4 >$ver_file
 
 fi
+
+if [ $var -lt 5 ]; then
+
+    echo y | android update sdk --all --no-ui --filter "tools-r25.2.3,platform-tools-25.0.1,build-tools-25.0.1,android-25,extra-android-m2repository,extra-google-google_play_services,extra-google-m2repository"
+
+    echo 5 >$ver_file
+
+fi
