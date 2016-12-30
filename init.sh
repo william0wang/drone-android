@@ -68,8 +68,16 @@ if [ $var -lt 6 ]; then
     git clone https://github.com/william0wang/initapp.git
     chmod 755 initapp/gradlew
     cd initapp && ./gradlew assembleRelease
-    rm -rf initapp
 
     echo 6 >$ver_file
+
+fi
+
+if [ $var -lt 7 ]; then
+
+    cd /data/workspace
+    rm -rf initapp
+
+    echo 7 >$ver_file
 
 fi
