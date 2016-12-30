@@ -20,12 +20,6 @@ if [ $var -lt 1 ]; then
     echo y | android update sdk --all --no-ui --filter \
     "platform-tools,build-tools-24.0.2,android-24,android-23,extra-android-m2repository,extra-google-google_play_services,extra-google-m2repository"
 
-    cd /data/workspace
-    git clone https://github.com/william0wang/initapp.git
-    chmod 755 initapp/gradlew
-    cd initapp && ./gradlew assembleRelease
-    rm -rf initapp
-
     echo 1 >$ver_file
 
 fi
@@ -63,5 +57,19 @@ if [ $var -lt 5 ]; then
     echo y | android update sdk --all --no-ui --filter "tools-r25.2.3,platform-tools-25.0.1,build-tools-25.0.1,android-25,extra-android-m2repository,extra-google-google_play_services,extra-google-m2repository"
 
     echo 5 >$ver_file
+
+fi
+
+if [ $var -lt 6 ]; then
+
+    echo y | android update sdk --all --no-ui --filter "tools-r25.2.4,platform-tools-25.0.3,build-tools-25.0.2"
+
+    cd /data/workspace
+    git clone https://github.com/william0wang/initapp.git
+    chmod 755 initapp/gradlew
+    cd initapp && ./gradlew assembleRelease
+    rm -rf initapp
+
+    echo 6 >$ver_file
 
 fi
