@@ -3,7 +3,7 @@ FROM greatfox/oraclejdk8:latest
 MAINTAINER William Wang "william@10ln.com"
 
 # Install Deps
-RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y --force-yes expect git wget libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 lib32z1 axel unzip p7zip && \
+RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y --force-yes expect git wget libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 lib32z1 axel unzip p7zip-full && \
 apt-get clean
 
 # Install Android SDK
