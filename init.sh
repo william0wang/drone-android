@@ -81,3 +81,11 @@ if [ $var -lt 7 ]; then
     echo 7 >$ver_file
 
 fi
+
+if [ $var -lt 8 ]; then
+
+    echo y | android update sdk --all --no-ui --filter "tools-r25.2.5"
+
+    echo 8 >$ver_file
+
+fi
