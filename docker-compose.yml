@@ -7,3 +7,4 @@ services:
       - /data/docker/drone/data/android-sdk-linux:/data/android-sdk-linux
       - /data/docker/drone/data/workspace:/data/workspace
       - /data/docker/drone/data/gradle:/root/.gradle
+      - /data/docker/drone/data/android:/root/.android
